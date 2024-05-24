@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function PlaceholderContent() {
+  
   return (
     <Card className="rounded-lg border-none mt-6">
       <CardContent className="p-6">

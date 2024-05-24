@@ -4,6 +4,7 @@ import {
   Settings,
   Bookmark,
   SquarePen,
+  FileSearch,
   LayoutGrid
 } from "lucide-react";
 
@@ -27,7 +28,7 @@ type Group = {
 };
 
 export function getMenuList(pathname: string): Group[] {
-  return [
+  return [ 
     {
       groupLabel: "",
       menus: [
@@ -36,6 +37,18 @@ export function getMenuList(pathname: string): Group[] {
           label: "Dashboard",
           active: pathname.includes("/dashboard"),
           icon: LayoutGrid,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/search",
+          label: "Search",
+          active: pathname.includes("/vectorsearch"),
+          icon: FileSearch,
           submenus: []
         }
       ]
